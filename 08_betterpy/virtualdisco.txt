@@ -1,0 +1,17 @@
+Explanation
+
+Virtual environments are isolated folders for packages. They're useful when creating multiple python projects, as different projects may need different versions of a package. Using virtual environments allows you to have a specific set of packages for each individual project. 
+
+Usage
+
+Virtual environments have to be activated before they can be used.
+
+Install: pip3 install virtualenv
+Create an environment: virtualenv nameOfDirectory
+Activate environment: source nameOfDirectory/bin/activate
+Deactivate environment: deactivate
+Install packages: pip3 install packageName
+
+Sources
+
+https://www.freecodecamp.org/news/python-virtual-environments-explained-with-examples/
