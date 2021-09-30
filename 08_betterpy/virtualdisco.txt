@@ -1,3 +1,8 @@
+ITD - Ivan Lam, Tami Takada, Deven Maheshwari Pd. 1
+SoftDev
+K08 Cross Pollination and Virtual Insanity/Researching Other Code/We did research on Python virtual environments and compiled useful info here. 
+2021-09-30
+
 Explanation
 
 Virtual environments are isolated folders for packages. They're useful when creating multiple python projects, as different projects may need different versions of a package. Using virtual environments allows you to have a specific set of packages for each individual project. 
