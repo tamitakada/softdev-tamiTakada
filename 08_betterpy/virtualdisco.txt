@@ -1,11 +1,15 @@
 ITD - Ivan Lam, Tami Takada, Deven Maheshwari Pd. 1
 SoftDev
-K08 Cross Pollination and Virtual Insanity/Researching Other Code/We did research on Python virtual environments and compiled useful info here. 
+K08 Cross Pollination and Virtual Insanity/Researching Other Code/Discussed the unix command $ python3 -m venv ~/myherozero in groups. 
 2021-09-30
 
-Explanation
+Explanation:
 
-Virtual environments are isolated folders for packages. They're useful when creating multiple python projects, as different projects may need different versions of a package. Using virtual environments allows you to have a specific set of packages for each individual project. 
+The terminal segment "$ python3 -m venv ~/myherozero" specify a python virtual environment being created in a subdirectory called myherozero. 
+
+python3 indicates that python is being used to establish the virtual environment. 
+Virtual environments (venv) are isolated folders for packages. They're useful when creating multiple python projects, as different projects may need different versions of a package. Using virtual environments allows you to have a specific set of packages for each individual project. 
+Finally, the ~/ means the environment will be in a sub directly of the home directory. 
 
 Usage
 
@@ -20,3 +24,5 @@ Install packages: pip3 install packageName
 Sources
 
 https://www.freecodecamp.org/news/python-virtual-environments-explained-with-examples/
+https://python.readthedocs.io/fr/stable/library/venv.html
+Terminal help commands
