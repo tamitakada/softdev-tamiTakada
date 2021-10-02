@@ -1,0 +1,10 @@
+The Gins - Tami Takada, Tina Nguyen, Gin, Sir Scrunchius Bunchius
+SoftDev
+K09 -- Simple Path to Greatness/Flask Basics/
+2021-10-01
+
+0. I've only seen it before in Python...
+1. You use '/' to separate directory and/or file names in the terminal and in urls.
+2. This will probably print out in terminal, and it'll print the name of the file.
+3. It will likely show up on the main web page, as it is returned from the main function that has the app route '/', which is probably the home page that will be displayed.
+4. In Flutter, you would do runApp(App()) to run the app, which is a little similar.
