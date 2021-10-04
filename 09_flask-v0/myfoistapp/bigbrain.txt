@@ -1,6 +1,6 @@
 The Gins - Tami Takada, Tina Nguyen, Gin, Sir Scrunchius Bunchius
 SoftDev
-K09 -- Simple Path to Greatness/Flask Basics/
+K09 -- Simple Path to Greatness/Flask Basics/We analyzed the contents of app.py
 2021-10-01
 
 0. I've only seen it before in Python...
@@ -8,3 +8,5 @@ K09 -- Simple Path to Greatness/Flask Basics/
 2. This will probably print out in terminal, and it'll print the name of the file.
 3. It will likely show up on the main web page, as it is returned from the main function that has the app route '/', which is probably the home page that will be displayed.
 4. In Flutter, you would do runApp(App()) to run the app, which is a little similar.
+
+Tina's observation: After running the app, I noticed that it gave you a URL to go to and it printed "No hablo queso!" which means "I don't speak cheese!" If the app wasn't actively running in the terminal, then the website would not be reached and you'd get an error. 
