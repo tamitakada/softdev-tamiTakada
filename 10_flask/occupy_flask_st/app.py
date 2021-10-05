@@ -33,7 +33,7 @@ def display_occupation():
     output += "<ul>"
     
     colors = ["red", "orange", "gold", "limegreen", "cyan", "magenta"]
-    num = 0;
+    num = 0
     
     # Precedes a printed list of all the jobs in occupations.csv
     for job in jobs.keys():
