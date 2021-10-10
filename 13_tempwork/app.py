@@ -13,7 +13,8 @@ def get_occupations_page():
     collection = occupations.read_occupations("occupations.csv")
     
     return render_template(
-        'occupyflaskst.html',
+        "occupyflaskst.html",
+        header = "Random Occupation",
         collection = collection,
         randomoc = occupations.choose_from_dict(collection)
     )
