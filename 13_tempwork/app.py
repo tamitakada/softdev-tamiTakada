@@ -21,7 +21,7 @@ def read_occupations(filename: str) -> dict:
             occupations[job_class] = float(percentage)
 
     total_percentage = occupations["Total"]
-    occupations["Other"] = 100 - total_percentage
+    occupations["Other"] = round(100 - total_percentage,1)
     del occupations["Total"]
 
     return occupations
