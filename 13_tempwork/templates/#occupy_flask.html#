@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<!-- 
+  Duckfish - 
+  SoftDev
+  Oct 2021
+ -->
+
+<html>
+
+  <head>
+    <title></title>
+  </head>
+
+  <body>
+    {% for item in collection %}
+     {{ item }}
+     <br>
+    {% endfor %}
+  </body>
