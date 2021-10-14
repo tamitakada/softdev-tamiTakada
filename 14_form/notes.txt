@@ -1,0 +1,8 @@
+New things:
+- Importing request
+
+Print statements print things to the terminal about the user who's accessing the site. 
+
+Request arguments are a dictionary, and you can access the form values from the dictionary. The key is the name of the input in the form. The arguments are put in the URL.
+
+When you submit the form, you're redirected to the /auth page, since the form action is defined as "/auth".
