@@ -1,0 +1,8 @@
+CrocCatGin - Rayat Roy, Michelle Lo, Tami Takada
+SoftDev
+K15 - Sessions Greetings
+2021-10-18
+
+We used nested conditionals in app.py to handle different cases for the login.
+We also used conditionals in the html response file to display different versions
+of the page depending on the user inputs.

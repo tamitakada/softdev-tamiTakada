@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--
+  CrocCatGin - Rayat Roy, Michelle Lo, Tami Takada
+  SoftDev
+  K15 - Sessions Greetings
+  2021-10-18
+ -->
+
+<html>
+
+  <head>
+    <title> Thank You for Your Response </title>
+  </head>
+
+  <body>
+    <h1>
+      CrocCatGin - Rayat Roy, Michelle Lo, Tami Takada
+    </h1>
+
+
+    <h3>
+      {% if  result == 'true' %}
+        Welcome {{ username }}!
+      {% elif result == 'bad username' %}
+        {{ username }} is an invalid username
+      {% else %}
+        Incorrect password for {{ username }}
+      {% endif %}
+    </h3>
+
+  </body>
+
+</html>
