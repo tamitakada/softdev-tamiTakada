@@ -5,49 +5,54 @@
 
 # Questions: what does the POST method do?
 
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, session
+import os
 
 app = Flask(__name__)
+app.secret_key = os.urandom(32)
+print(app.secret_key)
 
-@app.route("/", methods=['GET', 'POST'])
-
+@app.route('/', methods=['GET', 'POST'])
 def disp_loginpage():
     """Returns the login page using the login.html template (http://127.0.0.1:5000/)"""
-    return render_template( 'login.html' )
-
-
-@app.route("/auth", methods=['GET', 'POST'])
-def authenticate():
-    if request.args['username'] == 'CrocCatGin':
-        if request.args['password'] == 'password':
-            return render_template(
-                'response.html',
-                result = 'true',
-                username = request.args['username'] #request.args returns the value for the username key (that is, the username).
-            )
-        else:
-            return render_template(
-                'response.html',
-                result = 'bad password',
-                username = request.args['username'] #request.args returns the value for the username key (that is, the username).
-            )
-    else:
+    try:
+        #renders response using response template
         return render_template(
             'response.html',
-            result = 'bad username',
-            username = request.args['username'] #request.args returns the value for the username key (that is, the username).
+            result = 'true',
+            username = session['username']
         )
+    except:
+        return render_template( 'login.html' )
 
+@app.route('/auth', methods=['GET', 'POST'])
+def authenticate():
+    """Renders the response from the login page based on the user input."""
+    username = request.args['username']
+    password = request.args['password']
+    result = validate_login(username, password) #determines if username and/or password is correct
 
+    if result == 'true':
+        session['username'] = username
+
+    #renders response using response template
     return render_template(
         'response.html',
-        username = request.args['username'], #request.args returns the value for the username key (that is, the username).
-        method = request.method #Uses the GET method to display the form.
-    ) #response to a form submission
+        result = result,
+        username = request.args['username']
+    )
 
+def validate_login(username, password):
+    """Method to validate user input """
+    if username == 'CrocCatGin':
+        if password == 'password':
+            return 'true'
+        else:
+            return 'bad password'
+    else:
+        return 'bad username'
 
-
-if __name__ == "__main__": #false if this file imported as module
+if __name__ == '__main__': #false if this file imported as module
     #enable debugging, auto-restarting of server when this file is modified
     app.debug = True
     app.run()

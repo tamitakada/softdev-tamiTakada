@@ -20,7 +20,10 @@
 
     <h3>
       {% if  result == 'true' %}
-        Welcome {{ username }}!
+        Welcome {{ username }}!<br>
+        <form action="/auth">
+          <input type="Log out" name="logout">
+        </form>
       {% elif result == 'bad username' %}
         {{ username }} is an invalid username
       {% else %}
