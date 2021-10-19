@@ -16,6 +16,7 @@ print(app.secret_key)
 def disp_loginpage():
     """Renders either the login or the response page based on whether the user is logged in or not."""
     if request.method == 'POST': # triggered when the user clicks the log out button
+        session.pop('username')
         return render_template('login.html')
     else:
         try:
