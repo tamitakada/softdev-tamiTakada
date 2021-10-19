@@ -14,16 +14,19 @@ print(app.secret_key)
 
 @app.route('/', methods=['GET', 'POST'])
 def disp_loginpage():
-    """Returns the login page using the login.html template (http://127.0.0.1:5000/)"""
-    try:
-        #renders response using response template
-        return render_template(
-            'response.html',
-            result = 'true',
-            username = session['username']
-        )
-    except:
-        return render_template( 'login.html' )
+    """Renders either the login or the response page based on whether the user is logged in or not."""
+    if request.method == 'POST': # triggered when the user clicks the log out button
+        return render_template('login.html')
+    else:
+        try:
+            #renders response using response template
+            return render_template(
+                'response.html',
+                result = 'true',
+                username = session['username']
+            )
+        except:
+            return render_template( 'login.html' )
 
 @app.route('/auth', methods=['GET', 'POST'])
 def authenticate():
