@@ -1,8 +1,27 @@
 CrocCatGin - Rayat Roy, Michelle Lo, Tami Takada
 SoftDev
 K15 - Sessions Greetings
-2021-10-18
+2021-10-20
+
+Summaries + Discoveries:
 
 We used nested conditionals in app.py to handle different cases for the login.
+
 We also used conditionals in the html response file to display different versions
 of the page depending on the user inputs.
+
+To make sure that the user stays logged in (on the welcome page), we use python
+exception handling. If rendering response is successful, the user will be able to
+return to the response page even if they exit out the page. However, if any part
+goes wrong, which is to say if the user is not already successfully logged in, it
+will only render login.
+
+If user chooses to log out, we use the POST method, which signals app.py to remove
+session data and render login page.
+
+We use app.secret_key in order to use sessions and store session data. For our code,
+a new secret_key is generated every time a session is opened.
+
+Questions:
+What exactly does app.secret_key do and what's its significance?
+How can we use firefox console to its fullest potential?
