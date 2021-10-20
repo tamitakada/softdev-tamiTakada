@@ -3,9 +3,7 @@
 # K15 - Sessions Greetings
 # 2021-10-18
 
-# Questions: what does the POST method do?
-
-from flask import Flask, render_template, request, session
+from flask import Flask, render_template, request, session, redirect
 import os
 
 app = Flask(__name__)
@@ -18,33 +16,36 @@ def disp_loginpage():
     if request.method == 'POST': # triggered when the user clicks the log out button
         session.pop('username')
         return render_template('login.html')
-    else:
-        try:
-            #renders response using response template
-            return render_template(
-                'response.html',
-                result = 'true',
-                username = session['username']
-            )
-        except:
-            return render_template( 'login.html' )
+    
+    try:
+        # renders response using response template
+        return render_template(
+            'response.html',
+            result = 'true',
+            username = session['username']
+        )
+    except:
+        return redirect('/auth')
 
 @app.route('/auth', methods=['GET', 'POST'])
 def authenticate():
     """Renders the response from the login page based on the user input."""
-    username = request.args['username']
-    password = request.args['password']
-    result = validate_login(username, password) #determines if username and/or password is correct
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+        result = validate_login(username, password) #determines if username and/or password is correct
 
-    if result == 'true':
-        session['username'] = username
+        if result == 'true':
+            session['username'] = username
 
-    #renders response using response template
-    return render_template(
-        'response.html',
-        result = result,
-        username = request.args['username']
-    )
+        #renders response using response template
+        return render_template(
+            'response.html',
+            result = result,
+            username = request.form['username']
+        )
+    else:
+        return render_template('login.html')
 
 def validate_login(username, password):
     """Method to validate user input """
