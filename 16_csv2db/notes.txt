@@ -1,3 +1,8 @@
+CrocCatGin - Rayat Roy, Michelle Lo, Tami Takada
+SoftDev
+K16 - All About Database
+2021-10-20
+
 Summary and Discoveries
 Using the SQLITE shell:
 - SEMICOLONS ARE IMPORTANT to run commands such as SELECT... in the shell.
