@@ -7,6 +7,7 @@ we had to run the command again in its correct form to exit and run it again
 to execute the command properly.
 - Changing modes does not seem to have an effect on running lines such as INSERT...
 (perhaps more investigation is needed to verify this claim)
+-The ...> is a continuation of the last line when you haven't put a ;
 
 Questions:
 - What are the different modes?
