@@ -12,31 +12,36 @@ DB_FILE='discobandit.db'
 db = sqlite3.connect(DB_FILE) #open if file exists, otherwise create
 c = db.cursor()               #facilitate db ops -- you will use cursor to trigger db events
 
+def csv_to_db(filename, table, headers):
+    with open(filename, newline='') as csvfile: # reading courses.csv
+        reader = csv.DictReader(csvfile)
+
+        for row in reader:
+            command = 'INSERT INTO ' + table + ' VALUES (\"'
+            for i in range(len(headers)):
+                command += row[headers[i]]
+                if i == len(headers) - 1:
+                    command += ');'
+                elif i == 0:
+                    command += '\", '
+                else:
+                    command += ', '
+            # print(command)
+            c.execute(command)
+
 #==========================================================
 
 command = 'CREATE TABLE courses (name course, mark INTEGER KEY, id INTEGER KEY)'          # test SQL stmt in sqlite3 shell, save as string
 c.execute(command)    # run SQL statement
 
-with open('courses.csv', newline='') as csvfile: # reading courses.csv
-    reader = csv.DictReader(csvfile)
-
-    for row in reader:
-        command = 'INSERT INTO courses VALUES (\"' + row['code'] + '\", ' + row['mark'] + ', ' + row['id'] + ');'
-        c.execute(command)
+csv_to_db('courses.csv', 'courses', ['code', 'mark', 'id'])
 
 command = 'CREATE TABLE students (name student, age INTEGER KEY, id INTEGER KEY)'          # test SQL stmt in sqlite3 shell, save as string
 c.execute(command)
 
-with open('students.csv', newline='') as csvfile:
-    reader = csv.DictReader(csvfile)
-
-    for row in reader:
-        command = 'INSERT INTO students VALUES (\"' + row['name'] + '\", ' + row['age'] + ', ' + row['id'] + ');'
-        c.execute(command)
+csv_to_db('students.csv', 'students', ['name', 'age', 'id'])
 
 #==========================================================
 
 db.commit() #save changes
 db.close()  #close database
-
-# def csv_to_db(filename, headers):
