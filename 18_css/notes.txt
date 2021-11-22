@@ -1,0 +1,2 @@
+- The internal stylesheet looks exactly the same as the external one except that it's contained in the html file rather than a separate css file.
+- It's more convenient to do small customizations (like adding a margin to one element) through inline css rather than using an id and putting it in a css file.
