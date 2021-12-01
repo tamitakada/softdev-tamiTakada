@@ -1,6 +1,6 @@
 <!-- Tami Takada and Tomas Acuna-->
 <!-- SoftDev-->
-<!-- K23 -- No. 2?/Foundation/-->
+<!-- K23 -- No. 2?/Foundation/Making a web page using Foundation.-->
 <!-- 2021-12-01-->
 
 <!doctype html>
@@ -13,12 +13,68 @@
   <body>
     <div class="top-bar">
       <ul class="menu">
-	<li class="menu text"><h2>Navbar</h2></li>
-	<li><a href="">Test 0</a></li>
-	<li><a href="">Test 1</a></li>
+        <li class="menu text"><h2>Ice cream</h2></li>
+        <li><a href="#flavor-form">Flavor Form</a></li>
+        <li><a href="#flavor-cards">Flavor Cards</a></li>
       </ul>
     </div>
+    
+    <form style="padding: 20px;" id="flavor-form">
+        <div class="grid-x grid-padding-x">
+            <div class="small-6 cell">
+                <label>Name</label>
+                <input type="text" placeholder="Bob">
+            </div>
+            <div class="small-6 cell">
+                <label>Email</label>
+                <input type="email" placeholder="example@example.com">
+            </div>
+        </div>
+        <div class="grid-x grid-padding-x">
+            <fieldset class="large-6 cell">
+                <legend>What's your favorite ice cream flavor?</legend>
+                <input type="radio" value="choc" name="icecream" id="choc"><label for="choc">Chocolate!</label>
+                <input type="radio" value="stra" name="icecream" id="stra"><label for="stra">Strawberry!</label>
+                <input type="radio" value="vani" name="icecream" id="vani"><label for="vani">Vanilla!</label>
+                <input type="radio" value="mint" name="icecream" id="mint"><label for="mint">Mint chocolate chip!</label>
+            </fieldset>
+            <fieldset class="large-6 cell">
+                <legend>What toppings do you like?</legend>
+                <input type="checkbox" id="spri"><label for="spri">Sprinkles</label>
+                <input type="checkbox" id="chip"><label for="chip">Chocolate chips</label>
+                <input type="checkbox" id="gumm"><label for="gumm">Gummy bears</label>
+                <input type="checkbox" id="nuts"><label for="nuts">Nuts</label>
+                <input type="checkbox" id="oreo"><label for="oreo">Oreos</label>
+            </fieldset>
+        </div>
+        <input type="submit" class="button" id="submit">
+    </form>
 
-    <div class="callout success large">Successful large callout!</div>
+    <div class="callout success large"><h4>Ice cream flavors!</h4></div>
+    
+    <div class="grid-x grid-padding-x" id="flavor-cards">
+        <div class="card small-4 cell">
+            <div class="card-divider"><h4>Chocolate</h4></div>
+            <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Flovingitvegan.com%2Fwp-content%2Fuploads%2F2016%2F09%2FVegan-Chocolate-Ice-Cream-11.jpg&f=1&nofb=1">
+            <div class="card-section">
+              <p>It's the best flavor.</p>
+            </div>
+        </div>
+        <div class="card small-4 cell">
+            <div class="card-divider"><h4>Strawberry</h4></div>
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.eatyourselfskinny.com%2Fwp-content%2Fuploads%2F2017%2F03%2Fstrawberry-ice-cream-11.jpg&f=1&nofb=1">
+            <div class="card-section">
+              <p>It will suffice if there is no chocolate.</p>
+            </div>
+        </div>
+        <div class="card small-4 cell">
+            <div class="card-divider"><h4>Vanilla</h4></div>
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.tasteofhome.com%2Fwp-content%2Fuploads%2F2018%2F01%2FThomas-Jefferson-s-Vanilla-Ice-Cream_EXPS_THJJ19_159803_B02_21_11b-2-28.jpg&f=1&nofb=1">
+            <div class="card-section">
+              <p>Ehh... it's ok...</p>
+            </div>
+        </div>
+    </div>
+    
   </body>
 </html>

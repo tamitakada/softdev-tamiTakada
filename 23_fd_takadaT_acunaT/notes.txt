@@ -1,9 +1,24 @@
-Tami Takada
+Tami Takada and Tomas Acuna
 SoftDev
 K23 -- No. 2?/Foundation/Notes from other duo's Foundation tutorial
 2021-12-01
 
 DISCO
+
+- Foundation and Bootstrap have a lot of similarities
+  - The nav bars both use unordered lists/list items
+  - The "grid-x" in Foundation is 12 cells wide, which is the same as the Bootstrap column number
+  - The "hide-for-size-only" in Foundation is similar to the breakpoint system in Bootstrap, and how you can choose the behavior of divs based on the screen size
+  - The forms also look very similar, except there doesn't seem to be a "form-text" equivalent in Foundation
+
 QCC
+
+- Do these frameworks provide extra fonts?
+
 Q0
+
+- https://get.foundation/sites/docs/ (to look up buttons)
+
 Q1
+
+I prefer Bootstrap because though Foundation seems similar, I thought Bootstrap was easier to use. It's also easier to look up questions about Bootstrap since "foundation" is a common word.
