@@ -26,12 +26,12 @@ With this API, you can get all different kinds of information related to F1. You
 ## The Ugly:
 - Once you are signed up, it is pretty smooth sailing --> nothing really ugly
 
-**Location:** https://dictionaryapi.com/
+**Location:** https://ergast.com/mrd/
+https://documenter.getpostman.com/view/11586746/SztEa7bL#intro
 
 ---
 
 Accurate as of (last update):    2021-04-13
 
 Contributors:  
-Maddy Andersen, pd 1  
-Amelia Chin, pd 1  
+Tami Takada, pd 1  
