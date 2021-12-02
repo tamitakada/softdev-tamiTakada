@@ -8,12 +8,12 @@ With this API, you can get all different kinds of information related to F1. You
 (0=ezpz...5=nightmare)
 
 ### Key Provisioning:     
-- This API is free for non-commerical use.
+- This API is free for non-commerical use (can be used by websites using ads but not any applications that charge a fee to use).
 - You don't need a key to make calls.
+- Attribution is not necessary but is appreciated.
 
 ### Quotas:
 -  No more than 4 queries per second or 200 queries per hour
--  Use is limited to two reference APIs
 
 ---
 
