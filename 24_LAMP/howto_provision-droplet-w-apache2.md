@@ -3,7 +3,7 @@
 ## Overview
 Guide to creating an ubuntu 20.04 virtual machine ("droplet") and installing Apache2 web server on it.
 
-### Estimated Time Cost: _
+### Estimated Time Cost: 30mins
 
 ### Prerequisites:
 1. Log in as root with `ssh root@server_ip`
@@ -22,7 +22,27 @@ Guide to creating an ubuntu 20.04 virtual machine ("droplet") and installing Apa
 	```
 7. Allow traffic on port 80 with `sudo ufw allow in "Apache"`
 8. Run `sudo apt install mysql-server` to install MySQL
-9. 
+9. Run a security script that comes with MySQL with `sudo mysql_secure_installation`
+10. Install PHP with `sudo apt install php libapache2-mod-php php-mysql`
+11. To create a virtual host, first run `sudo mkdir /var/www/domain` to make a directory
+12. Then run `sudo chown -R $USER:$USER /var/www/domain` to set yourself as the owner of the directory
+13. Create a new config file, `/etc/apache2/sites-available/domain.conf`, using a command-line editor, and paste in the following:
+    ```
+    <VirtualHost *:80>
+        ServerName domain
+        ServerAlias www.domain
+        ServerAdmin webmaster@localhost
+        DocumentRoot /var/www/domain
+        ErrorLog ${APACHE_LOG_DIR}/error.log
+        CustomLog ${APACHE_LOG_DIR}/access.log combined
+    </VirtualHost>
+    ```
+14. Run `sudo a2ensite domain` to enable the virtual host
+15. Disable the default website with `sudo a2dissite 000-default`
+16. Run `sudo apache2ctl configtest` to confirm the config file is syntactically sound
+17. Reload Apache to show changes with `sudo systemctl reload apache2`
+
+Now you can add HTML files to `/var/www/domain` to test that `http://server_domain` works.
 
 ### Resources
 * https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-20-04
@@ -35,8 +55,6 @@ Guide to creating an ubuntu 20.04 virtual machine ("droplet") and installing Apa
 * https://www.digitalocean.com/docs/droplets/how-to/add-ssh-keys/create-with-openssh/
 * https://www.digitalocean.com/docs/droplets/how-to/connect-with-ssh/openssh/
 
-(please verify ; some of these are old links)
-
 ---
 
 Accurate as of (last update): 2022-01-11
@@ -45,8 +63,6 @@ Accurate as of (last update): 2022-01-11
 - You can use "sudo" before commands when logged in as a regular user to get superuser priveleges
 - Run `curl http://icanhazip.com` to get your public IP
 
-#### Contributors:  
-Clyde "Thluffy" Sinclair  
-Topher Mykolyk, pd0  
-
-_Note: the two spaces after each name are important! ( <--burn after reading)  _
+#### Contributors:
+Michelle Lo, pd1    
+Tami Takada, pd1  
