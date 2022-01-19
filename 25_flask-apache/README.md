@@ -67,14 +67,25 @@ Flask is not built to serve -- on its own -- persistent or high-traffic sites. A
     ```
     Replace mywebsite.com with your server IP or domain name
 11. Run `sudo a2ensite FlaskApp` to enable the host
-12. `cd ..` and create the `flaskapp.wsgi` file
+12. `cd ..` and create the `flaskapp.wsgi` file. Add the following into the file:
+    ```
+    #!/usr/bin/python
+    import sys
+    import logging
+    logging.basicConfig(stream=sys.stderr)
+    sys.path.insert(0,"/var/www/FlaskApp/")
+
+    from FlaskApp import app as application
+    application.secret_key = 'Add your secret key'
+    ```
+13. Run `sudo service apache2 restart` and visit the domain name or IP address to confirm it's working
 
 ### Resources
 * https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps
 
 ---
 
-Accurate as of (last update): 2022-01-18
+Accurate as of (last update): 2022-01-19
 
 #### Contributors:  
 Michelle Lo, pd1  
