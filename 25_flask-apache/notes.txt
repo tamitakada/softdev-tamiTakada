@@ -7,3 +7,4 @@ time spent: 1.5 hrs
 - after installing mod_wsgi, it should already be enabled
 - instead of running sudo apt-get install python-pip, you might have to run sudo apt-get install python3-pip
 - there may be python version issues
+- run `apachectl configtest` to see if there's any issues with your config file if you can't reach the site
