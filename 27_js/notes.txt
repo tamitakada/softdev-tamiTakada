@@ -1,12 +1,11 @@
-Team Phantom Tollbooth :: Clyde Sinclair, Fierce Dragon
-SoftDev pd0
+Team Cappuccino :: Clyde Sinclair, Fierce Dragon
+SoftDev pd1
 K27 -- Basic functions in JavaScript
-2022-02-03r
+2022-02-04
 
 DISCO
 -----------------------------------------------------------------
-* Ooooh, ___
-* Aaah-haa!  ____...
+* Syntax seems very similar to Java, but you don't need to declare the types
 =================================================================
 
 QCC
