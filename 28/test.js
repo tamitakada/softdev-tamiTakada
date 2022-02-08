@@ -96,4 +96,27 @@ var fib = function(n) {
         return fib(n - 1) + fib(n - 2);
 }
 
-// GCD
+var gcd_helper = function(low, high) {
+    result = 0;
+    for (let i = 0; i <= low; i++) {
+        if (low % i == 0 && high % i == 0) {
+            result = i;
+        }
+    }
+    return result;
+}
+
+var gcd = function(a, b) {
+    if (a == 0 || b == 0) {
+        return 0;
+    }
+    else if (a == b) {
+        return a;
+    }
+    else if (a < b) {
+        return gcd_helper(a, b);
+    }
+    else {
+        return gcd_helper(b, a);
+    }
+}
