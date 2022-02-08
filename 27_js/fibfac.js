@@ -1,4 +1,4 @@
-// Team Cappuccino :: Clyde Sinclair, Fierce Dragon 
+// Team Cappuccino :: Daniel Sooknanan, Tami Takada 
 // SoftDev pd1
 // K27 -- Basic functions in JavaScript
 // 2022-02-04
