@@ -18,8 +18,8 @@
    (delete this block comment once you are done)
 */
 
-// Team Phantom Tollbooth :: Clyde Sinclair, Fierce Dragon 
-// SoftDev pd0
+// Team Cappuccino :: Daniel Sooknanan, Tami Takada 
+// SoftDev pd1
 // K28 -- Getting more comfortable with the dev console and the DOM
 // 2022-02-08t
 // --------------------------------------------------
