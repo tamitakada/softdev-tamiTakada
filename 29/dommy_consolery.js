@@ -18,10 +18,10 @@
    (delete this block comment once you are done)
 */
 
-// Team :: LTW, Tami Takada 
+// Lucas Tom-Wong, Tami Takada 
 // SoftDev pd1
-// K28 -- Getting more comfortable with the dev console and the DOM
-// 2022-02-08t
+// K29 -- DOMfoolery++
+// 2022-02-09
 // --------------------------------------------------
 
 
