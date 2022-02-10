@@ -18,7 +18,7 @@
    (delete this block comment once you are done)
 */
 
-// Team Cappuccino :: Daniel Sooknanan, Tami Takada 
+// Team :: LTW, Tami Takada 
 // SoftDev pd1
 // K28 -- Getting more comfortable with the dev console and the DOM
 // 2022-02-08t
@@ -120,7 +120,19 @@ var gcd = function(a, b) {
     }
 }
 
-// Since there's no parameter passed in, it seems like the 
-// event object is passed in as a string -> '[object MouseEvent]'
-document.getElementById('b').addEventListener('click', addItem);
-document.getElementById('c').addEventListener('click', addItem('new'));
+document.getElementById('fib').addEventListener('click', function() {
+	let num = Math.floor(Math.random() * 101);
+	let result = fib(num);
+	document.getElementById('result').innerHTML = 'Fib of ' + num + ' is ' + result;
+});
+document.getElementById('fac').addEventListener('click', function() {
+	let num = Math.floor(Math.random() * 21);
+	let result = fact(num);
+	document.getElementById('result').innerHTML = 'Fact of ' + num + ' is ' + result;
+});
+document.getElementById('gcd').addEventListener('click', function() {
+	let num_0 = Math.floor(Math.random() * 101);
+	let num_1 = Math.floor(Math.random() * 101);
+	let result = gcd(num_0, num_1);
+	document.getElementById('result').innerHTML = 'GCD of ' + num_0 + ' and ' + num_1 + ' is ' + result;
+});
