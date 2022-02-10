@@ -121,7 +121,7 @@ var gcd = function(a, b) {
 }
 
 document.getElementById('fib').addEventListener('click', function() {
-	let num = Math.floor(Math.random() * 101);
+	let num = Math.floor(Math.random() * 31);
 	let result = fib(num);
 	document.getElementById('result').innerHTML = 'Fib of ' + num + ' is ' + result;
 });
