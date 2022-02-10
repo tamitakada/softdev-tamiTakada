@@ -1,8 +1,0 @@
-Lucas Tom-Wong, Tami Takada 
-SoftDev pd1
-K29 -- DOMfoolery++
-2022-02-09
-
-- Too much recursion can cause a message to pop up saying that Firefox is being slowed down by the page
-- Plugging in a function call rather than a function as the addEvent parameter will not work as intended
-- If an error occurs in the javascript function, it isn't shown on the page
