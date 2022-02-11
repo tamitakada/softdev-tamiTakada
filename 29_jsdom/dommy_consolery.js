@@ -31,14 +31,15 @@ let o = { 'name' : 'Thluffy',
           }
         };
 
-
-let addItem = function(text) {
+let addItem = function(type, params, ans) {
   let list = document.getElementById("thelist");
   let newitem = document.createElement("li");
-  newitem.innerHTML = text;
+  newitem.innerHTML = type + ' of '+ params + ' is...';
+  newitem.addEventListener('click', function() {
+  	newitem.innerHTML = ans;
+  });
   list.appendChild(newitem);
 };
-
 
 let removeItem = function(n) {
   let listitems = document.getElementsByTagName('li');
@@ -103,16 +104,22 @@ let gcd = function(a, b) {
 document.getElementById('fib').addEventListener('click', function() {
 	let num = Math.floor(Math.random() * 31);
 	let result = fib(num);
-	document.getElementById('result').innerHTML = 'Fib of ' + num + ' is ' + result;
+	let text = 'Fib of ' + num + ' is ' + result;
+	document.getElementById('result').innerHTML = text;
+	addItem('fib', [num], result);
 });
 document.getElementById('fac').addEventListener('click', function() {
 	let num = Math.floor(Math.random() * 21);
 	let result = fact(num);
-	document.getElementById('result').innerHTML = 'Fact of ' + num + ' is ' + result;
+	let text = 'Fact of ' + num + ' is ' + result;
+	document.getElementById('result').innerHTML = text;
+	addItem('fact', [num], result);
 });
 document.getElementById('gcd').addEventListener('click', function() {
 	let num_0 = Math.floor(Math.random() * 101);
 	let num_1 = Math.floor(Math.random() * 101);
 	let result = gcd(num_0, num_1);
-	document.getElementById('result').innerHTML = 'GCD of ' + num_0 + ' and ' + num_1 + ' is ' + result;
+	let text = 'GCD of ' + num_0 + ' and ' + num_1 + ' is ' + result;
+	document.getElementById('result').innerHTML = text;
+	addItem('GCD', [num_0, num_1], result);
 });
