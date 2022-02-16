@@ -1,7 +1,9 @@
-// Team Phantom Tollbooth :: Clyde Sinclair, Fierce Dragon
-// SoftDev pd0
+// Team Cappuccino :: Daniel Sooknanan, Tami Takada 
+// SoftDev pd1
 // K31 -- canvas based JS animation
 // 2022-02-15t
+
+
 
 // model for HTML5 canvas-based animation
 
@@ -17,7 +19,7 @@ var stopButton = document.getElementById("buttonStop"); // GET STOP BUTTON
 var ctx = c.getContext("2d"); // YOUR CODE HERE
 
 //set fill color to team color
-ctx.fillStyle = "red"; // YOUR CODE HERE
+ctx.fillStyle = "#ff335c"; // YOUR CODE HERE
 
 var requestID = 0;  //init global var for use with animation frames
 
