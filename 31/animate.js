@@ -34,7 +34,7 @@ var growing = true;
 
 
 //var drawDot = function() {
-var drawDot = () => {
+var drawDot = (e) => {
   console.log("drawDot invoked...")
   
   clear();
@@ -50,6 +50,7 @@ var drawDot = () => {
   if (growing) radius += 2;
   else radius -= 2;
   
+  if (e && requestID) window.cancelAnimationFrame(requestID);
   requestID = window.requestAnimationFrame(drawDot);
 };
 
@@ -64,7 +65,7 @@ var stopIt = () => {
 
 
 dotButton.addEventListener( "click", function() {
-  if (requestID === 0) drawDot();
+  drawDot();
 });
 stopButton.addEventListener( "click",  stopIt );
 
