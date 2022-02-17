@@ -74,7 +74,7 @@ var f = () => {
   }
     
   if (y >= (c.height - 50) || y <= 0) {
-    angle = Math.PI + angle;
+    angle = 2 * Math.PI - angle;
   }
   
   ctx.drawImage(img, x, y, 100, 50);
