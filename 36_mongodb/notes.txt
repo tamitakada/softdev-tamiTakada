@@ -1,0 +1,13 @@
+Tami Takada
+SoftDev
+K36 -- Another DB Perspective/MongoDB/MongoDB Course Chapter 2
+2022-04-27
+
+- Data is stored in BSON (faster than JSON), but can be viewed as JSON
+- Exporting data:
+	- mongodump --uri "Cluster URI" (for BSON)
+	- mongoexport --uri "Cluster URI" (for JSON)
+- Importing data:
+	- mongorestore --uri "Cluster URI" (BSON)
+	- mongoimport --uri "Cluster URI" (JSON)
+- it = command that iterates through cursor, a pointer to the result set of a query
