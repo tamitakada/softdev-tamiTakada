@@ -1,0 +1,9 @@
+Tami Takada
+SoftDev
+K34 -- Another DB Perspective/MongoDB/MongoDB Course Chapter 1
+2022-04-27
+
+- MongoDB has its own "university" with many courses on MongoDB
+- MongoDB automatically makes backups of data so that if one copy isn't working, you can still access the data using the others
+- NoSQL document database
+
