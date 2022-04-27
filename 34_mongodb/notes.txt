@@ -1,9 +1,8 @@
 Tami Takada
 SoftDev
-K34 -- Another DB Perspective/MongoDB/MongoDB Course Chapter 1
+K34 -- Another DB Perspective/MongoDB/Intro Video
 2022-04-27
 
-- MongoDB has its own "university" with many courses on MongoDB
-- MongoDB automatically makes backups of data so that if one copy isn't working, you can still access the data using the others
-- NoSQL document database
-
+- Design of database centered around usage model (many different patterns of use - schema versioning, subset, computed, bucket, extended reference, etc.)
+- Easy to update data
+- One-to-one, one-to-many, many-to-many relationships can all be added with the default _id key
