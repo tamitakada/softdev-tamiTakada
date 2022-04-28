@@ -1,0 +1,10 @@
+Tami Takada
+SoftDev
+K37 -- Another DB Perspective/MongoDB/MongoDB Course Chapter 3
+2022-04-28
+
+- _id field can have a value other than ObjectId() if specified (as long as it's unique for every document)
+- There's a schema validation functionality to force a specific structure for documents
+- documents, by default, are inserted in the order that they are written in the array; this can be changed with ordered: false
+- updateMany(query for documents to update, how to update)
+- deleteOne/updateOne/findOne etc. are good if using _id field as query
