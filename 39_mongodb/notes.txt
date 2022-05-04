@@ -1,0 +1,9 @@
+Tami Takada
+SoftDev
+K39 -- Another DB Perspective/MongoDB/MongoDB Course Chapter 5
+2022-05-04
+
+- You can do everything & more with aggregate than you can with just MQL
+	- Aggregate is for more than just filtering documents
+- Pipeline: Array of things to do, will be done in that order
+- MongoDB assumes limit.sort = sort.limit
