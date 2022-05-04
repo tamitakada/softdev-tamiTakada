@@ -1,0 +1,9 @@
+Tami Takada
+SoftDev
+K40 -- Another DB Perspective/MongoDB/MongoDB Course Chapter 6
+2022-05-04
+
+- You can get performance info on the cluster dashboard
+- Charts can be used to create cool graphs from data in clusters
+- Compass can be used to get performance/size info about databases
+- Compass helps visualize data and shows the most helpful graph type for a given field (e.g. coordinates will be represented on a map)
