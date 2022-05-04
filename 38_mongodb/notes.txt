@@ -6,3 +6,8 @@ K38 -- Another DB Perspective/MongoDB/MongoDB Course Chapter 4
 - Many different logic operators ($nor, $not, etc.)
 - Default operator is $and
 - Explicit $and should be used when there are multiple of the same operator
+- When checking for a value in a field, use $in instead of $or
+- $expr allows for aggregation expressions, conditionals, and variables
+- $ also addresses field value
+- $elemMatch to check within array fields
+- dot notation used to get fields in sub documents
