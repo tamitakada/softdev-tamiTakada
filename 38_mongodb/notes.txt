@@ -1,0 +1,8 @@
+Tami Takada
+SoftDev
+K38 -- Another DB Perspective/MongoDB/MongoDB Course Chapter 4
+2022-05-04
+
+- Many different logic operators ($nor, $not, etc.)
+- Default operator is $and
+- Explicit $and should be used when there are multiple of the same operator
